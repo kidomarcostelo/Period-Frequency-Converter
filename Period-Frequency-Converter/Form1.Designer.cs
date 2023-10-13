@@ -28,70 +28,123 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             textBox1 = new TextBox();
-            checkBox1 = new CheckBox();
-            checkBox2 = new CheckBox();
             label1 = new Label();
+            textBox2 = new TextBox();
+            comboBox1 = new ComboBox();
+            comboBox2 = new ComboBox();
+            FirstLabel = new Label();
+            SecondLabel = new Label();
+            button1 = new Button();
+            button2 = new Button();
+            label2 = new Label();
             SuspendLayout();
-            // 
-            // button1
-            // 
-            button1.Location = new Point(341, 218);
-            button1.Name = "button1";
-            button1.Size = new Size(112, 34);
-            button1.TabIndex = 0;
-            button1.Text = "Convert";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(85, 161);
+            textBox1.Location = new Point(47, 99);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(368, 31);
             textBox1.TabIndex = 1;
             // 
-            // checkBox1
-            // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(120, 222);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(103, 29);
-            checkBox1.TabIndex = 2;
-            checkBox1.Text = "seconds";
-            checkBox1.UseVisualStyleBackColor = true;
-            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
-            // 
-            // checkBox2
-            // 
-            checkBox2.AutoSize = true;
-            checkBox2.Location = new Point(229, 223);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(77, 29);
-            checkBox2.TabIndex = 2;
-            checkBox2.Text = "hertz";
-            checkBox2.UseVisualStyleBackColor = true;
-            checkBox2.CheckedChanged += checkBox2_CheckedChanged;
-            // 
             // label1
             // 
-            label1.Location = new Point(85, 326);
+            label1.Location = new Point(47, 258);
             label1.Name = "label1";
             label1.Size = new Size(368, 38);
             label1.TabIndex = 3;
-            label1.TextAlign = ContentAlignment.MiddleRight;
+            label1.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(47, 211);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(368, 31);
+            textBox2.TabIndex = 1;
+            // 
+            // comboBox1
+            // 
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(447, 97);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(105, 33);
+            comboBox1.TabIndex = 4;
+            // 
+            // comboBox2
+            // 
+            comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(447, 209);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(105, 33);
+            comboBox2.TabIndex = 4;
+            // 
+            // FirstLabel
+            // 
+            FirstLabel.AutoSize = true;
+            FirstLabel.Location = new Point(47, 71);
+            FirstLabel.Name = "FirstLabel";
+            FirstLabel.Size = new Size(86, 25);
+            FirstLabel.TabIndex = 5;
+            FirstLabel.Text = "FirstLabel";
+            // 
+            // SecondLabel
+            // 
+            SecondLabel.AutoSize = true;
+            SecondLabel.Location = new Point(47, 183);
+            SecondLabel.Name = "SecondLabel";
+            SecondLabel.Size = new Size(112, 25);
+            SecondLabel.TabIndex = 5;
+            SecondLabel.Text = "SecondLabel";
+            // 
+            // button1
+            // 
+            button1.Location = new Point(249, 321);
+            button1.Name = "button1";
+            button1.Size = new Size(112, 34);
+            button1.TabIndex = 6;
+            button1.Text = "Convert";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // button2
+            // 
+            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
+            button2.BackgroundImageLayout = ImageLayout.Stretch;
+            button2.Location = new Point(289, 156);
+            button2.Name = "button2";
+            button2.Size = new Size(30, 34);
+            button2.TabIndex = 7;
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(9, 9);
+            label2.Name = "label2";
+            label2.Size = new Size(352, 32);
+            label2.TabIndex = 8;
+            label2.Text = "Frequency / Period Converter";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(548, 434);
-            Controls.Add(label1);
-            Controls.Add(checkBox2);
-            Controls.Add(checkBox1);
-            Controls.Add(textBox1);
+            ClientSize = new Size(614, 411);
+            Controls.Add(label2);
+            Controls.Add(button2);
             Controls.Add(button1);
+            Controls.Add(SecondLabel);
+            Controls.Add(FirstLabel);
+            Controls.Add(comboBox2);
+            Controls.Add(comboBox1);
+            Controls.Add(label1);
+            Controls.Add(textBox2);
+            Controls.Add(textBox1);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -99,11 +152,15 @@
         }
 
         #endregion
-
-        private Button button1;
         private TextBox textBox1;
-        private CheckBox checkBox1;
-        private CheckBox checkBox2;
         private Label label1;
+        private TextBox textBox2;
+        private ComboBox comboBox1;
+        private ComboBox comboBox2;
+        private Label FirstLabel;
+        private Label SecondLabel;
+        private Button button1;
+        private Button button2;
+        private Label label2;
     }
 }
